@@ -6,7 +6,7 @@
             'path' => '/',
         ],
         (object) [
-            'name' => 'Barang',
+            'name' => 'Inventaris',
             'icon' => 'fa-solid fa-box',
             'path' => 'products',
         ],
@@ -15,6 +15,11 @@
             'name' => 'Maintenance',
             'icon' => 'fa-cogs',
             'path' => 'maintenances',
+        ],
+        (object) [
+            'name' => 'Items',
+            'icon' => 'fa-tag',
+            'path' => 'items',
         ],
     ];
 @endphp
@@ -39,7 +44,7 @@
                 data-accordion="false">
                 @foreach ($menus as $menu)
                     <li class="nav-item">
-                        <a href="{{ $menu->path }}"
+                        <a href="{{ request()->path == '/' ? '/' : '' }}{{ $menu->path }}"
                             class="nav-link {{ request()->is($menu->path) ? 'active' : '' }} ">
                             <i class="nav-icon
                             fas {{ $menu->icon }} text-white"></i>
