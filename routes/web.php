@@ -3,12 +3,16 @@
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MaintenanceController;
 use App\Http\Controllers\MaintenanceItemController;
 
 
 Route::get('/', [DashboardController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index']);
+Route::Post('/login', [LoginController::class, 'login']);
+Route::delete('/logout', [LoginController::class, 'logout']);
 
 //route product
 Route::get('/products', [ProductController::class, 'list']);

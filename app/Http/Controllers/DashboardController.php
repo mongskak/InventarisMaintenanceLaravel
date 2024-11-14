@@ -23,7 +23,7 @@ class DashboardController extends Controller
         //mengambil count product yang sering di maintenance
         $productMaintenanceCount = Products::withCount('maintenance')  // Menghitung jumlah maintenance yang terkait dengan barang
             ->orderByDesc('maintenance_count')  // Mengurutkan berdasarkan jumlah maintenance terbanyak
-            ->take(10)  // Ambil 10 produk teratas
+            ->take(5)  // Ambil 5 produk teratas
             ->get();
 
         // Menampilkan ke view

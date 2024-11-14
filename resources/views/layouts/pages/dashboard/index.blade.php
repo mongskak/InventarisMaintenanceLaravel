@@ -84,7 +84,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h2>Top 10 Barang yang Sering di Maintenance</h2>
+                    <h2>Top 5 Barang yang Sering di Maintenance</h2>
                 </div>
                 <div class="card-body">
                     <table id="example1" class="table table-bordered table-striped">
